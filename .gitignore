@@ -1,0 +1,19 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local environment files
+.env
+.env.*
+*.local
+
+# OS and Office clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
