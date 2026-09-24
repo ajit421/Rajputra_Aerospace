@@ -126,29 +126,35 @@ git push
 
 ### Deploy from GitHub (automatic on every push)
 
-1. Log in at https://dash.cloudflare.com and open **Workers & Pages**.
-2. Click **Create**, choose the **Pages** tab, then **Import an existing Git repository** (the button may say "Connect to Git").
-3. Connect your GitHub account, allow access to the `rajput-royale` repository, and select it.
-4. Enter these build settings:
+The site runs as a Cloudflare **Worker** with static assets. `Rajput_royale_web/wrangler.jsonc` tells Cloudflare to serve the `dist/` folder.
+
+1. Log in at https://dash.cloudflare.com and open **Compute → Workers & Pages**.
+2. Click **Create application**, then **Connect GitHub**, and select the `Rajput_Royale` repository.
+3. Enter these build settings (you can change them later under **Settings → Builds**):
 
    | Setting | Value |
    |---|---|
-   | Project name | `rajput-royale` (this becomes `rajput-royale.pages.dev`) |
-   | Production branch | `main` |
-   | Framework preset | `Vite` (or `None`) |
+   | Project name | `rajput-royale` |
    | Build command | `npm run build` |
-   | Build output directory | `dist` |
-   | **Root directory** (under *Advanced*) | `Rajput_royale_web` |
-   | Environment variable | `NODE_VERSION` = `22` |
+   | Deploy command | `npx wrangler deploy` |
+   | **Root directory** | `Rajput_royale_web` |
+   | Branch control | `main` |
+   | Variable | `NODE_VERSION` = `22` |
 
    The **Root directory** setting matters most. Without it, Cloudflare looks for the website in the wrong folder and the build fails.
-5. Click **Save and Deploy**. The first build takes about 1–2 minutes. Your site is then live at `https://rajput-royale.pages.dev`.
+4. Deploy, then open the Worker's **Domains** tab and switch **on** the Production URL `rajput-royale.<your-subdomain>.workers.dev`. While it's off, the site is deployed but has no address. The Overview page then says "No URLs enabled".
 
-From now on, every `git push` to `main` rebuilds and redeploys the site automatically. A push to any other branch gets its own preview link, which is handy for trying changes.
+From now on, every `git push` to `main` rebuilds and redeploys the site automatically.
+
+**If GitHub won't connect** (error "Cloudflare Pages was unable to be installed"):
+
+1. In GitHub → Settings → Applications, uninstall **Cloudflare Workers and Pages**.
+2. In the **Authorized GitHub Apps** tab, revoke it as well.
+3. Connect again from Cloudflare.
 
 ### Use your own domain (optional)
 
-In the Pages project, open **Custom domains**, choose **Set up a custom domain**, and enter your domain, for example `rajputroyale.com`. If the domain is already on Cloudflare, it connects automatically. If it isn't, Cloudflare shows you the DNS record to add at your domain registrar. HTTPS is set up for you.
+In the Worker, open **Domains → Add Domain**, and enter your domain, for example `rajputroyale.com`. If the domain is already on Cloudflare, it connects automatically. If it isn't, Cloudflare shows you the DNS record to add at your domain registrar. HTTPS is set up for you.
 
 ### Deploy without GitHub (alternative)
 
@@ -157,7 +163,7 @@ To put a build online directly from your computer:
 ```bash
 cd Rajput_royale_web
 npm run build
-npx wrangler pages deploy dist --project-name rajput-royale
+npx wrangler deploy        # uses wrangler.jsonc and uploads dist/
 ```
 
 The first run opens a browser so you can log in to Cloudflare.
