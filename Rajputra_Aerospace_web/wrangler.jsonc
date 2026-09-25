@@ -1,0 +1,8 @@
+// Cloudflare Pages config: serves the Vite build in dist/ at rajputra-aerospace.pages.dev.
+// The Git-connected Pages project runs `npm run build` and publishes dist/.
+// Manual deploy from this folder: npm run build && npx wrangler pages deploy
+{
+  "name": "rajputra-aerospace",
+  "compatibility_date": "2026-09-24",
+  "pages_build_output_dir": "./dist"
+}

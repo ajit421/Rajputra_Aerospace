@@ -10,7 +10,7 @@ export function Hero() {
     <section id="top" className="relative flex min-h-svh flex-col justify-end overflow-hidden">
       <motion.img
         src="/images/hero-alps.webp"
-        alt="The Rajput Royale flying above snow-capped alpine peaks and a sea of clouds at sunrise"
+        alt="The Rajputra Aerospace aircraft flying above snow-capped alpine peaks and a sea of clouds at sunrise"
         className="absolute inset-0 h-full w-full object-cover"
         style={{ y, scale }}
         fetchPriority="high"
@@ -20,10 +20,10 @@ export function Hero() {
 
       <div className="relative mx-auto w-full max-w-7xl px-5 pb-12 pt-32 sm:px-8 sm:pb-16">
         <p className="rise font-display text-sm font-semibold uppercase tracking-[0.35em] text-copper-light" style={{ animationDelay: '0.1s' }}>
-          Air One presents
+          Introducing
         </p>
         <h1 className="rise mt-4 font-display text-6xl font-semibold leading-[0.95] tracking-tight sm:text-8xl lg:text-9xl" style={{ animationDelay: '0.2s' }}>
-          Rajput Royale
+          Rajputra Aerospace
         </h1>
         <p className="rise mt-6 max-w-2xl text-lg leading-relaxed text-ivory/85 sm:text-2xl" style={{ animationDelay: '0.35s' }}>
           A hybrid-electric autogyro with a bird-inspired, tailless design. Built for safe, fast regional flight.

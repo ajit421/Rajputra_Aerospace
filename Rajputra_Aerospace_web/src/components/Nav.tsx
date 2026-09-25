@@ -16,8 +16,8 @@ export function Nav() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${scrolled || open ? 'bg-carbon/90 backdrop-blur-md border-b border-white/5' : 'bg-transparent'}`}>
       <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8">
         <a href="#top" className="flex items-baseline gap-2 font-display" onClick={() => setOpen(false)}>
-          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-copper-light">Air One</span>
-          <span className="text-lg font-semibold tracking-tight">Rajput Royale</span>
+          <span className="text-lg font-semibold tracking-tight">Rajputra</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-copper-light">Aerospace</span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

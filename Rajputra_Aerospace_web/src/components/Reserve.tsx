@@ -10,7 +10,7 @@ export function Reserve() {
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const data = new FormData(e.currentTarget)
-    const subject = `Rajput Royale enquiry: ${data.get('interest')}`
+    const subject = `Rajputra Aerospace enquiry: ${data.get('interest')}`
     const body = [
       `Name: ${data.get('name')}`,
       `Email: ${data.get('email')}`,
@@ -31,12 +31,12 @@ export function Reserve() {
         <div>
           <SectionHeading
             eyebrow="Reserve"
-            title="Be first in the Rajput Royale"
+            title="Fly first with Rajputra Aerospace"
             intro="Register interest as an owner, operator, investor or partner. We'll share the dossier and the programme timeline."
           />
           <Reveal className="mt-10 flex flex-wrap gap-4">
-            <a href="/docs/rajput-royale-dossier.pdf" download className="rounded-full border border-ivory/30 px-6 py-3 font-semibold transition-colors hover:border-ivory hover:bg-ivory/10">Download dossier (PDF)</a>
-            <a href="/docs/rajput-royale-engineering.pdf" download className="rounded-full border border-ivory/30 px-6 py-3 font-semibold transition-colors hover:border-ivory hover:bg-ivory/10">Engineering pack (PDF)</a>
+            <a href="/docs/rajputra-aerospace-dossier.pdf" download className="rounded-full border border-ivory/30 px-6 py-3 font-semibold transition-colors hover:border-ivory hover:bg-ivory/10">Download dossier (PDF)</a>
+            <a href="/docs/rajputra-aerospace-engineering.pdf" download className="rounded-full border border-ivory/30 px-6 py-3 font-semibold transition-colors hover:border-ivory hover:bg-ivory/10">Engineering pack (PDF)</a>
           </Reveal>
         </div>
 
@@ -80,8 +80,8 @@ export function Footer() {
   return (
     <footer className="border-t border-white/5 bg-carbon">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-10 text-sm text-stone sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <p><span className="font-display font-semibold text-ivory">Air One · Rajput Royale</span> · Concept aircraft. Images are renderings.</p>
-        <p>© {new Date().getFullYear()} Air One</p>
+        <p><span className="font-display font-semibold text-ivory">Rajputra Aerospace</span> · Concept aircraft. Images are renderings.</p>
+        <p>© {new Date().getFullYear()} Rajputra Aerospace</p>
       </div>
     </footer>
   )

@@ -39,8 +39,8 @@ export function Design() {
           </Reveal>
           <Reveal delay={0.1}>
             <figure>
-              <img src="/images/view-top.webp" alt="Top plan view of the Rajput Royale showing the swept aft pylons with ducted thrusters" loading="lazy" className="aspect-[4/3] w-full rounded-2xl bg-ivory object-contain" />
-              <figcaption className="mt-3 text-sm text-stone">Rajput Royale · top plan view</figcaption>
+              <img src="/images/view-top.webp" alt="Top plan view of the Rajputra Aerospace aircraft showing the swept aft pylons with ducted thrusters" loading="lazy" className="aspect-[4/3] w-full rounded-2xl bg-ivory object-contain" />
+              <figcaption className="mt-3 text-sm text-stone">Rajputra Aerospace · top plan view</figcaption>
             </figure>
           </Reveal>
         </div>
@@ -222,7 +222,7 @@ export function Specs() {
 export function Landing() {
   return (
     <section className="relative flex min-h-[80svh] items-end overflow-hidden">
-      <img src="/images/helipad.webp" alt="The Rajput Royale parked on a rooftop helipad above a harbour at sunset" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+      <img src="/images/helipad.webp" alt="The Rajputra Aerospace aircraft parked on a rooftop helipad above a harbour at sunset" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/50 to-transparent" />
       <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8 sm:pb-24">
         <Reveal>
@@ -248,7 +248,7 @@ export function Missions() {
           {MISSIONS.map((m, i) => (
             <Reveal key={m.src} delay={(i % 4) * 0.08}>
               <figure className="group relative overflow-hidden rounded-2xl">
-                <img src={m.src} alt={`The Rajput Royale: ${m.place.toLowerCase()}`} loading="lazy" className="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={m.src} alt={`The Rajputra Aerospace aircraft: ${m.place.toLowerCase()}`} loading="lazy" className="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-carbon/90 via-carbon/10 to-transparent" />
                 <figcaption className="absolute inset-x-0 bottom-0 p-5">
                   <p className="font-display text-lg font-semibold">{m.title}</p>

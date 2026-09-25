@@ -1,4 +1,4 @@
-// All site copy and figures in one place. Figures come from the Rajput
+// All site copy and figures in one place. Figures come from the Rajputra
 // technical design report and are design targets, not certified data.
 
 // Change this to the address that should receive reservation requests.
@@ -38,10 +38,10 @@ export const FEATURES = [
 ]
 
 export const VIEWS = [
-  { id: 'left', label: 'Left', src: '/images/view-left.webp', alt: 'Left side view of the Rajput Royale on its tricycle landing gear' },
+  { id: 'left', label: 'Left', src: '/images/view-left.webp', alt: 'Left side view of the Rajputra Aerospace aircraft on its tricycle landing gear' },
   { id: 'front', label: 'Front', src: '/images/view-front.webp', alt: 'Front view showing the bubble canopy, nose wheel and both rear thrusters' },
   { id: 'rear', label: 'Rear', src: '/images/view-rear.webp', alt: 'Rear view showing the boat-tail and twin ducted thruster nacelles' },
-  { id: 'right', label: 'Right', src: '/images/view-right.webp', alt: 'Right side view of the Rajput Royale' },
+  { id: 'right', label: 'Right', src: '/images/view-right.webp', alt: 'Right side view of the Rajputra Aerospace aircraft' },
   { id: 'top', label: 'Top', src: '/images/view-top.webp', alt: 'Top plan view showing the swept aft pylons and two-blade rotor' },
 ]
 

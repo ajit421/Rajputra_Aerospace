@@ -1,6 +1,6 @@
-# AIR ONE — "Rajput" 10 Scenic & Situational Master Prompts
+# RAJPUTRA AEROSPACE — 10 Scenic & Situational Master Prompts
 
-Yeh 10 master prompts **`Rajput/orignal.png`** aur **`Rajput/top_side_view.png`** ke exact design par banaye gaye hain:
+Yeh 10 master prompts **`Documentation/orignal.png`** aur **`Documentation/top_side_view.png`** ke exact design par banaye gaye hain:
 - **Fuselage:** Teardrop aerodynamic pod, metallic copper-orange top shell, matte dark carbon-fiber lower hull.
 - **Rotor:** Central mast par **strictly twin-blade (2 blades)** carbon-fiber autogyro rotor.
 - **Rear Thrusters:** Swallow-tailed Kite bird-inspired swept aft pylons with cylindrical black ducted thrusters.
@@ -11,13 +11,13 @@ Yeh 10 master prompts **`Rajput/orignal.png`** aur **`Rajput/top_side_view.png`*
 
 ## 📋 Table of Locations & Situations
 
-| # | Location / Scenario | Time of Day / Atmosphere | Generated File in `Rajput/` |
+| # | Location / Scenario | Time of Day / Atmosphere | Generated File in `Documentation/` |
 |---|---|---|---|
-| **01** | Dubai Futuristic Skyline | Blue Hour Twilight (Skyscraper reflections) | [`scene_01_dubai_skyline.jpg`](file:///d:/Desktop/Air_one/Rajput/scene_01_dubai_skyline.jpg) |
-| **02** | Swiss Alps High Mountain Peaks | Morning Sunrise (Golden glow above clouds) | [`scene_02_swiss_alps.jpg`](file:///d:/Desktop/Air_one/Rajput/scene_02_swiss_alps.jpg) |
-| **03** | Pacific Coastline & Highway | Golden Hour Sunset (Crashing waves & sea rocks) | [`scene_03_coastal_highway.jpg`](file:///d:/Desktop/Air_one/Rajput/scene_03_coastal_highway.jpg) |
-| **04** | Monaco Superyacht Marina | Late Afternoon Sunset (Luxury yacht flyby) | [`scene_04_monaco_superyacht.jpg`](file:///d:/Desktop/Air_one/Rajput/scene_04_monaco_superyacht.jpg) |
-| **05** | Red Rock Desert Canyon (Sedona) | Late Afternoon Sun (Dynamic banking turn) | [`scene_05_desert_canyon.jpg`](file:///d:/Desktop/Air_one/Rajput/scene_05_desert_canyon.jpg) |
+| **01** | Dubai Futuristic Skyline | Blue Hour Twilight (Skyscraper reflections) | [`scene_01_dubai_skyline.jpg`](scene_01_dubai_skyline.jpg) |
+| **02** | Swiss Alps High Mountain Peaks | Morning Sunrise (Golden glow above clouds) | [`scene_02_swiss_alps.jpg`](scene_02_swiss_alps.jpg) |
+| **03** | Pacific Coastline & Highway | Golden Hour Sunset (Crashing waves & sea rocks) | [`scene_03_coastal_highway.jpg`](scene_03_coastal_highway.jpg) |
+| **04** | Monaco Superyacht Marina | Late Afternoon Sunset (Luxury yacht flyby) | [`scene_04_monaco_superyacht.jpg`](scene_04_monaco_superyacht.jpg) |
+| **05** | Red Rock Desert Canyon (Sedona) | Late Afternoon Sun (Dynamic banking turn) | [`scene_05_desert_canyon.jpg`](scene_05_desert_canyon.jpg) |
 | **06** | Tropical Maldives Lagoon | High Noon Tropical Sun (Turquoise reefs & sandbars) | *Prompt Below (Ready for Nano Banana)* |
 | **07** | Futuristic Aerospace R&D Hangar | Moody Geometric LED Studio (Clean white floor) | *Prompt Below (Ready for Nano Banana)* |
 | **08** | Tokyo Cyberpunk Neon Skyline | Rainy Night (Neon billboards & wet reflections) | *Prompt Below (Ready for Nano Banana)* |

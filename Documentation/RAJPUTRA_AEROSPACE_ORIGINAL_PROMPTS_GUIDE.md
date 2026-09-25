@@ -1,6 +1,6 @@
-# AIR ONE — "Rajput" Master Prompt Guide (With Airplane Wheels & Bird-Tail Pylons)
+# RAJPUTRA AEROSPACE — Master Prompt Guide (With Airplane Wheels & Bird-Tail Pylons)
 
-Yeh guide aapke naye **`Rajput/orignal.png`** aur **`Rajput/top_side_view.png`** ke bird-inspired design ke sath official **Tricycle Airplane Landing Gear (Wheels)** ko integrate karke banayi gayi hai.
+Yeh guide aapke naye **`Documentation/orignal.png`** aur **`Documentation/top_side_view.png`** ke bird-inspired design ke sath official **Tricycle Airplane Landing Gear (Wheels)** ko integrate karke banayi gayi hai.
 
 ---
 

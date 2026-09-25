@@ -4,19 +4,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository layout
 
-This repo is for **AIR ONE "Rajput Royale"**, a concept gyro-VTOL aircraft. The aircraft was first called "Rajput". Older files and image titles still use that name.
+This repo is for **Rajputra Aerospace**, a concept gyro-VTOL aircraft. "Rajputra Aerospace" is the single name for the company, the aircraft and the website. Use it everywhere, and write "the Rajputra Aerospace aircraft" where a sentence needs the aircraft itself.
+
+The project was earlier called "Air One Rajput", then "Rajput Royale". Text baked into the images, the PDFs and the downloaded `.pptx` still shows those names. Changing it means regenerating those files from the updated prompts.
 
 - `Documentation/`: design assets, with no build step. It holds:
   - The AI image-generation prompt guides (Markdown).
   - The images generated from them.
-  - Two PDFs: `Air_One_Rajput_Dossier.pdf` and `Air_One_Rajput_Engineering.pdf`.
-  - The investor pitch deck (`.pptx`).
-- `Rajput_royale_web/`: the product website. Stack: Vite 8, React 19, TypeScript, Tailwind CSS 4, Motion. See its README.
+  - Two PDFs: `Rajputra_Aerospace_Dossier.pdf` and `Rajputra_Aerospace_Engineering.pdf`.
+  - The investor pitch deck (`Rajputra_Aerospace_Pitch_Deck.pptx`).
+- `Rajputra_Aerospace_web/`: the product website, deployed at https://rajputra-aerospace.pages.dev. Stack: Vite 8, React 19, TypeScript, Tailwind CSS 4, Motion. See its README.
 - `SETUP.md`: GitHub and Cloudflare Pages deployment steps.
 
-The folders in `../` (`renders/`, `video/`, `new_image/`, `images/`, `AIR_ONE_X1_*`) belong to the earlier **AIR ONE X1** concept, which is a different airframe. Do not use X1 assets for Rajput work. `../images/` holds the X1 blueprints that the Rajput technical prompts were modeled on.
+The folders in `../` (`renders/`, `video/`, `new_image/`, `images/`, `AIR_ONE_X1_*`) belong to the earlier **AIR ONE X1** concept, which is a different airframe. Do not use X1 assets for this aircraft, and don't rename the `air_one_x1_*` reference filenames in the prompt guides. `../images/` holds the X1 blueprints that the technical prompts were modeled on.
 
-## Website commands (run inside `Rajput_royale_web/`)
+## Website commands (run inside `Rajputra_Aerospace_web/`)
 
 ```bash
 npm run dev       # dev server, http://localhost:5173
@@ -35,9 +37,9 @@ The guides are written in Hinglish (Hindi and English mixed), with the prompts t
 
 | File | Covers | Output images |
 |---|---|---|
-| `RAJPUT_ORIGINAL_PROMPTS_GUIDE.md` | 5 white-studio orthographic views (left, right, top, front, rear) | `*_side_view*.jpg/png` |
-| `RAJPUT_10_SCENIC_PROMPTS.md` | 10 location and flight scenes | `scene_01_…` to `scene_10_…` |
-| `RAJPUT_TECHNICAL_BLUEPRINT_PROMPTS.md` | 7 blueprint, exploded, cutaway and CFD sheets, each mapped to an X1 reference in `../images/` | `rajput_*.jpg` |
+| `RAJPUTRA_AEROSPACE_ORIGINAL_PROMPTS_GUIDE.md` | 5 white-studio orthographic views (left, right, top, front, rear) | `*_side_view*.jpg/png` |
+| `RAJPUTRA_AEROSPACE_10_SCENIC_PROMPTS.md` | 10 location and flight scenes | `scene_01_…` to `scene_10_…` |
+| `RAJPUTRA_AEROSPACE_TECHNICAL_BLUEPRINT_PROMPTS.md` | 7 blueprint, exploded, cutaway and CFD sheets, each mapped to an X1 reference in `../images/` | `rajputra_aerospace_*.jpg` |
 
 Each guide has the same structure:
 
@@ -99,7 +101,6 @@ tail fin, vertical rudder, tail boom, wings, mid-body thruster fans, cabin-side 
 
 ## Known gaps in the docs
 
-- The guides call the primary reference image `Rajput/orignal.png` (misspelled). That file doesn't exist; `top_side_view.png` does.
-- The blueprint table links `rajput_dark_cutaway_blueprint.jpg`, but that file has not been generated yet.
+- The guides call the primary reference image `Documentation/orignal.png` (misspelled). That file doesn't exist; `top_side_view.png` does.
+- The blueprint table links `rajputra_aerospace_dark_cutaway_blueprint.jpg`, but that file has not been generated yet.
 - The scenic table still lists scenes 06–10 as "Prompt Below", but their images already exist.
-- The tables use absolute `file:///d:/Desktop/Air_one/Rajput/...` links. Since the move into `Documentation/`, those links are broken.

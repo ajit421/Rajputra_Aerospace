@@ -1,4 +1,4 @@
-// Converts the Rajput source images in ../Documentation into web-sized WebP
+// Converts the Rajputra Aerospace source images in ../Documentation into web-sized WebP
 // files under public/images, and copies the PDFs into public/docs.
 // Run with: npm run images
 import { mkdir, copyFile } from 'node:fs/promises'
@@ -21,12 +21,12 @@ const images = {
   'rear_side_view.jpg': ['view-rear', 1800],
   'top_side_view.png': ['view-top', 1800],
   'Swallow-tailed_Kite_AndyMorffew_FlickrCC_314.webp': ['kite', 1400],
-  'rajput_aerodynamic_cfd_blueprint.jpg': ['cfd', 2000],
-  'rajput_color_exploded_assembly.jpg': ['exploded-color', 2000],
-  'rajput_dark_blueprint.jpg': ['blueprint-dark', 2000],
-  'rajput_dark_exploded_blueprint.jpg': ['exploded-dark', 2000],
-  'rajput_parchment_tech_sheet.jpg': ['sheet-parchment', 2000],
-  'rajput_technical_spec_sheet.jpg': ['sheet-spec', 2000],
+  'rajputra_aerospace_aerodynamic_cfd_blueprint.jpg': ['cfd', 2000],
+  'rajputra_aerospace_color_exploded_assembly.jpg': ['exploded-color', 2000],
+  'rajputra_aerospace_dark_blueprint.jpg': ['blueprint-dark', 2000],
+  'rajputra_aerospace_dark_exploded_blueprint.jpg': ['exploded-dark', 2000],
+  'rajputra_aerospace_parchment_tech_sheet.jpg': ['sheet-parchment', 2000],
+  'rajputra_aerospace_technical_spec_sheet.jpg': ['sheet-spec', 2000],
   'scene_01_dubai_skyline.jpg': ['scene-dubai', 1600],
   'scene_03_coastal_highway.jpg': ['scene-coastal', 1600],
   'scene_04_monaco_superyacht.jpg': ['scene-monaco', 1600],
@@ -41,8 +41,8 @@ const images = {
 }
 
 const docs = {
-  'Air_One_Rajput_Dossier.pdf': 'rajput-royale-dossier.pdf',
-  'Air_One_Rajput_Engineering.pdf': 'rajput-royale-engineering.pdf',
+  'Rajputra_Aerospace_Dossier.pdf': 'rajputra-aerospace-dossier.pdf',
+  'Rajputra_Aerospace_Engineering.pdf': 'rajputra-aerospace-engineering.pdf',
 }
 
 await mkdir(imagesOut, { recursive: true })
