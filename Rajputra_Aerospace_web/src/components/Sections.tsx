@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
-import { AERO, DRAWINGS, FEATURES, MISSIONS, POWER, SPECS, VIEWS } from '../data'
+import { AERO, APPLICATIONS, DRAWINGS, FEATURES, INCUBATOR, MISSIONS, POWER, SPECS, TEAM, VIEWS } from '../data'
 import { Eyebrow, Reveal, SectionHeading } from './ui'
 
 export function Safety() {
@@ -13,7 +13,7 @@ export function Safety() {
             A rotor that keeps flying when the power stops.
           </h2>
           <p className="mt-8 max-w-3xl text-lg leading-relaxed sm:text-xl">
-            The main rotor is never driven in flight. Air flowing up through it keeps it spinning in autorotation, so the aircraft stays controllable and can glide to a landing even after total power loss. No gearbox to the rotor, no tail rotor, far fewer parts.
+            The main rotor is powered only for vertical takeoff and landing. In cruise it is never driven: air flowing up through it keeps it spinning in autorotation, so the aircraft stays controllable and can glide to a landing even after total power loss. No tail rotor: the twin rear fans swivel to counter rotor torque.
           </p>
         </Reveal>
       </div>
@@ -196,7 +196,7 @@ export function Specs() {
           tone="deep"
           dark={false}
           title="Light, compact, half its weight free"
-          intro="Empty weight is about half of the maximum takeoff weight, so each flight can favour passengers or fuel and battery for longer range."
+          intro="Empty weight is half of the maximum takeoff weight, leaving 250 kg for two people, luggage and fuel."
         />
         <div className="mt-14 grid gap-10 md:grid-cols-2">
           {SPECS.map((g, i) => (
@@ -227,9 +227,9 @@ export function Landing() {
       <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8 sm:pb-24">
         <Reveal>
           <Eyebrow>Infrastructure</Eyebrow>
-          <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">Lands on rooftops, estates and vertiports</h2>
+          <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">Takes off from a parking space, a road or a field</h2>
           <div className="mt-8 flex flex-wrap gap-3">
-            {['5.85 m long', '3.15 m wheel track', '8.5 m rotor span'].map((t) => (
+            {['4.8 m long', '1.86 m wide', '2 seats'].map((t) => (
               <span key={t} className="rounded-full border border-ivory/30 bg-ivory/10 px-5 py-2 font-medium backdrop-blur-sm">{t}</span>
             ))}
           </div>
@@ -244,7 +244,12 @@ export function Missions() {
     <section id="missions" className="bg-carbon">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32">
         <SectionHeading eyebrow="Missions" title="One aircraft, many missions" />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <Reveal className="mt-10 flex flex-wrap gap-3">
+          {APPLICATIONS.map((a) => (
+            <span key={a} className="rounded-full border border-white/15 bg-white/5 px-5 py-2 text-sm font-medium text-sand">{a}</span>
+          ))}
+        </Reveal>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {MISSIONS.map((m, i) => (
             <Reveal key={m.src} delay={(i % 4) * 0.08}>
               <figure className="group relative overflow-hidden rounded-2xl">
@@ -255,6 +260,29 @@ export function Missions() {
                   <p className="text-sm text-sand">{m.place}</p>
                 </figcaption>
               </figure>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export function Team() {
+  return (
+    <section id="team" className="bg-carbon-2">
+      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32">
+        <SectionHeading eyebrow="Team" title="Promoters and advisors" intro={`Incubated at ${INCUBATOR}.`} />
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {TEAM.map((t, i) => (
+            <Reveal key={t.name} delay={(i % 3) * 0.08} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+              <h3 className="font-display text-xl font-semibold">{t.name}</h3>
+              <p className="mt-2 leading-relaxed text-sand">{t.role}</p>
+              {t.link && (
+                <a href={t.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-sm font-semibold text-copper-light hover:text-ivory">
+                  {t.site} <span aria-hidden>↗</span>
+                </a>
+              )}
             </Reveal>
           ))}
         </div>

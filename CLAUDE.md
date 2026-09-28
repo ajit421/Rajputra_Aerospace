@@ -61,38 +61,41 @@ New prompts should follow it.
   - Studio views and blueprints **show the wheels**.
   - The in-flight scenic prompts (01–07) say "no wheels / no landing gear". This is intentional. `scene_monaco_helipad_with_wheels.jpg` is the landed variant.
 
-## Engineering figures (from the technical design report)
+## Engineering figures (company spec sheet, Sept 2026, plus the technical design report)
 
 These are design targets, not certified data. Blueprint callouts already cite some report terms: "Monocoque Teardrop Pod (Cd = 0.178)", "Boundary Layer Ingestion", "Tailless Low-Drag Boat-Tail", "Optimized High-Speed Takeoff Rake".
 
-- **Type:** VTOL-capable hybrid-electric autogyro. The rotor is unpowered in cruise and autorotates. The two rear thrusters give all forward thrust.
+- **Type:** plug-in hybrid-electric autogyro, 2 seats in a single row. The rotor is powered only for vertical takeoff and landing, and autorotates unpowered in cruise. The two rear ducted fans give all forward thrust, and each swivels independently through 90° to counter rotor torque during VTOL.
 - **Rotor:** 2-blade carbon rotor with a Rotating Mass Balancer on the mast. The mast rises from a "sway-back" pylon profile.
-- **Power:** Motor 500 Series brushless (BLDC) motors in composite ducts, a Li-ion battery for takeoff bursts, and a hybrid generator for cruise.
+- **Power:** Motor 500 Series brushless (BLDC) motors in composite ducts, a 40 kWh fast-charging solid-state Li-ion battery, and a hybrid generator fed by a 60 L tank (E20 and biofuel compatible).
 - **Dimensions:**
 
   | Measure | Value |
   |---|---|
-  | Rotor span | 8500 mm |
-  | Fuselage length | 5850 mm |
-  | Wheelbase | 2600–2700 mm |
-  | Wheel track | 3150 mm |
-  | Height | 3150 mm |
+  | Length | 4795 mm |
+  | Width | 1855 mm |
+  | Height | 3000 mm |
+  | Wheelbase | 2700 mm |
+  | Rotor span | 8500 mm (old report figure, not on the new spec sheet) |
+
+  The older report and the blueprint images use 5850 mm length, 3150 mm track and 3150 mm height.
 
 - **Mass:**
 
   | Measure | Value |
   |---|---|
   | Maximum takeoff weight (MTOW) | 500 kg |
-  | Empty weight | 230–270 kg |
-  | Payload plus fuel | up to 270 kg |
+  | Empty weight | 250 kg |
+  | Payload | 250 kg |
 
-- **Performance:** 300 km/h cruise, 600 km range, 20,000 ft ceiling, Cd 0.178.
+- **Performance:** 300 km/h cruise, 2 h+ endurance, 600 km range, 20,000 ft ceiling, Cd 0.178.
+- **Takeoff and landing:** electric VTOL from an MPV-sized parking space; ultra-short takeoff from unprepared roads or fields.
+- **Economics:** about ₹20/km, about ₹6,000 per flight hour, price from ₹55 lakh.
 
 Some claims in the report don't hold up well, so avoid repeating them uncritically:
 
 - "Cannot stall."
-- "Fits a standard parking space." The 3.15 m track is wider than a typical 2.5 m bay.
-- True VTOL with an unpowered rotor.
+- "VTOL from a parking space." The fuselage fits, but an 8.5 m rotor does not clear a typical 5 m bay.
 
 Shared negative prompt (the blueprint guide replaces the last terms with `blurry, low resolution, messy lines`):
 ```
