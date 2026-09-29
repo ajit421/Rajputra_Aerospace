@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ground: #0a1018;
+  --color-panel: #111a25;
+  --color-panel-2: #16212f;
+  --color-line: #243244;
+  --color-ink: #e9edf2;
+  --color-mist: #c3ccd7;
+  --color-muted: #93a0b1;
+  --color-copper: #dd7a2e;
+  --color-copper-soft: #f0a564;
+  --color-stream: #62d2e4;
+  --color-paper: #f4f4f2;
+
+  --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-copper);
+  color: #140b03;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 3px;
+}
+
+dialog::backdrop {
+  background: rgb(4 7 11 / 0.92);
+  backdrop-filter: blur(4px);
+}
+
+/* Hero entrance runs in CSS so the headline shows even before JS loads. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none;
+  }
+}

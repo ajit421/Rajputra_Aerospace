@@ -14,6 +14,7 @@ The project was earlier called "Air One Rajput", then "Rajput Royale". Text bake
   - Two PDFs: `Rajputra_Aerospace_Dossier.pdf` and `Rajputra_Aerospace_Engineering.pdf`.
   - The investor pitch deck (`Rajputra_Aerospace_Pitch_Deck.pptx`).
 - `Rajputra_Aerospace_web/`: the product website, deployed at https://rajputra-aerospace.pages.dev. Stack: Vite 8, React 19, TypeScript, Tailwind CSS 4, Motion. See its README.
+- `Rajputra_Aerospace_client/`: a second website built from the client's Claude artifact design, on the same stack. It has its own README. Its drawings in `images-src/` were edited to the current name and dimensions, so don't regenerate them from `Documentation/`. Leave `Rajputra_Aerospace_web/` alone when working on it.
 - `SETUP.md`: GitHub and Cloudflare Pages deployment steps.
 
 The folders in `../` (`renders/`, `video/`, `new_image/`, `images/`, `AIR_ONE_X1_*`) belong to the earlier **AIR ONE X1** concept, which is a different airframe. Do not use X1 assets for this aircraft, and don't rename the `air_one_x1_*` reference filenames in the prompt guides. `../images/` holds the X1 blueprints that the technical prompts were modeled on.
