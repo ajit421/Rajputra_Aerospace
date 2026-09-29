@@ -3,24 +3,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { APPLICATIONS, COSTS, DRAWINGS, FEATURES, FOOTPRINT, INCUBATOR, MISSIONS, MODES, OVERVIEW_TAGS, POWER, SPECS, TEAM, VIEWS } from '../data'
 import { Eyebrow, Reveal, SectionHeading } from './ui'
 
-// The page reads as a story, from the idea to the people behind it.
-
-// The idea: why an autogyro at all.
-export function Idea() {
-  return (
-    <section id="idea" className="bg-copper text-carbon">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-24 sm:px-8 sm:py-32 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:gap-16">
-        <SectionHeading eyebrow="The idea" tone="ink" title="A rotor that keeps flying when the power stops" />
-        <Reveal delay={0.1}>
-          <p className="text-lg leading-relaxed sm:text-xl">
-            The main rotor is powered only for vertical takeoff and landing. In cruise it is never driven: air flowing up through it keeps it spinning in autorotation, so the aircraft stays controllable and can glide to a landing even after total power loss.
-          </p>
-          <p className="mt-5 text-lg leading-relaxed sm:text-xl">No tail rotor: the twin rear fans swivel to counter rotor torque.</p>
-        </Reveal>
-      </div>
-    </section>
-  )
-}
+// The page reads as a story, from the aircraft to the people behind it.
 
 // The aircraft: how it works, then every angle.
 export function Overview() {
