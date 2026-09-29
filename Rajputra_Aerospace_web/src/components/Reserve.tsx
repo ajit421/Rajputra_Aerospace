@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { CONTACT_EMAIL } from '../data'
+import { CONTACT_EMAIL, INCUBATOR, NAV } from '../data'
 import { Reveal, SectionHeading } from './ui'
 
 // There is no backend: submitting opens the visitor's email app with the
@@ -44,16 +44,16 @@ export function Reserve() {
           <form onSubmit={onSubmit} className="space-y-4 rounded-3xl border border-white/10 bg-carbon/80 p-6 backdrop-blur-md sm:p-8">
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="block">
-                <span className="mb-1.5 block text-sm text-sand">Name</span>
+                <span className="mb-1.5 block font-mono text-xs uppercase tracking-[0.15em] text-sand">Name</span>
                 <input name="name" required autoComplete="name" className={field} />
               </label>
               <label className="block">
-                <span className="mb-1.5 block text-sm text-sand">Email</span>
+                <span className="mb-1.5 block font-mono text-xs uppercase tracking-[0.15em] text-sand">Email</span>
                 <input name="email" type="email" required autoComplete="email" className={field} />
               </label>
             </div>
             <label className="block">
-              <span className="mb-1.5 block text-sm text-sand">I'm interested as</span>
+              <span className="mb-1.5 block font-mono text-xs uppercase tracking-[0.15em] text-sand">I'm interested as</span>
               <select name="interest" className={field} defaultValue="Private owner">
                 <option className="bg-carbon">Private owner</option>
                 <option className="bg-carbon">Charter or tourism operator</option>
@@ -62,7 +62,7 @@ export function Reserve() {
               </select>
             </label>
             <label className="block">
-              <span className="mb-1.5 block text-sm text-sand">Message</span>
+              <span className="mb-1.5 block font-mono text-xs uppercase tracking-[0.15em] text-sand">Message</span>
               <textarea name="message" rows={4} className={field} placeholder="Tell us about your mission" />
             </label>
             <button type="submit" className="w-full rounded-full bg-copper px-6 py-3.5 font-semibold text-carbon transition-colors hover:bg-copper-light">
@@ -79,9 +79,22 @@ export function Reserve() {
 export function Footer() {
   return (
     <footer className="border-t border-white/5 bg-carbon">
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-10 text-sm text-stone sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <p><span className="font-display font-semibold text-ivory">Rajputra Aerospace</span> · Concept aircraft. Images are renderings.</p>
-        <p>© {new Date().getFullYear()} Rajputra Aerospace</p>
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-start md:justify-between">
+        <div>
+          <a href="#top" className="flex items-baseline gap-2 font-display">
+            <span className="text-lg font-semibold tracking-tight">Rajputra</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-copper-light">Aerospace</span>
+          </a>
+          <p className="mt-3 text-sm text-stone">Incubated at {INCUBATOR}.</p>
+        </div>
+        <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-3">
+          {NAV.map((item) => (
+            <a key={item.href} href={item.href} className="font-mono text-xs uppercase tracking-[0.15em] text-sand hover:text-ivory">{item.label}</a>
+          ))}
+        </nav>
+      </div>
+      <div className="mx-auto max-w-7xl border-t border-white/5 px-5 py-6 text-sm text-stone sm:px-8">
+        © {new Date().getFullYear()} Rajputra Aerospace
       </div>
     </footer>
   )

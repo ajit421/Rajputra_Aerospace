@@ -1,7 +1,7 @@
 import { Hero } from './components/Hero'
 import { Nav } from './components/Nav'
 import { Footer, Reserve } from './components/Reserve'
-import { Aircraft, Design, Engineering, Landing, Missions, Safety, Specs, Team } from './components/Sections'
+import { Aircraft, Engineering, Idea, Missions, Overview, Specs, Takeoff, Team } from './components/Sections'
 
 export default function App() {
   return (
@@ -9,13 +9,13 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
-        <Safety />
-        <Design />
+        <Idea />
+        <Overview />
         <Aircraft />
+        <Takeoff />
         <Engineering />
-        <Specs />
-        <Landing />
         <Missions />
+        <Specs />
         <Team />
         <Reserve />
       </main>

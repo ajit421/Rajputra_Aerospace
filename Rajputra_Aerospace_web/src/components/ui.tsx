@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react'
 import { motion } from 'motion/react'
 
+type Tone = 'copper' | 'cyan' | 'deep' | 'ink'
+
 export function Reveal({ children, delay = 0, className = '' }: { children: ReactNode; delay?: number; className?: string }) {
   return (
     <motion.div
@@ -15,23 +17,24 @@ export function Reveal({ children, delay = 0, className = '' }: { children: Reac
   )
 }
 
-export function Eyebrow({ children, tone = 'copper' }: { children: ReactNode; tone?: 'copper' | 'cyan' | 'deep' }) {
-  const color = { copper: 'text-copper-light', cyan: 'text-cyan', deep: 'text-copper-deep' }[tone]
-  return <p className={`font-display text-sm font-semibold uppercase tracking-[0.3em] ${color}`}>{children}</p>
+// Small label above a heading, e.g. "THE AIRCRAFT".
+export function Eyebrow({ children, tone = 'copper' }: { children: ReactNode; tone?: Tone }) {
+  const color = { copper: 'text-copper-light', cyan: 'text-cyan', deep: 'text-copper-deep', ink: 'text-carbon' }[tone]
+  return <p className={`font-display text-xs font-semibold uppercase tracking-[0.25em] sm:text-sm ${color}`}>{children}</p>
 }
 
 export function SectionHeading({ eyebrow, title, intro, tone, dark = true }: {
-  eyebrow: string
+  eyebrow?: string
   title: string
   intro?: string
-  tone?: 'copper' | 'cyan' | 'deep'
+  tone?: Tone
   dark?: boolean
 }) {
   return (
-    <Reveal className="max-w-3xl">
-      <Eyebrow tone={tone}>{eyebrow}</Eyebrow>
-      <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">{title}</h2>
-      {intro && <p className={`mt-6 text-lg leading-relaxed ${dark ? 'text-sand' : 'text-[#4a4540]'}`}>{intro}</p>}
+    <Reveal className="max-w-4xl">
+      {eyebrow && <Eyebrow tone={tone}>{eyebrow}</Eyebrow>}
+      <h2 className={`${eyebrow ? 'mt-5 ' : ''}font-display text-4xl font-bold uppercase leading-[0.95] tracking-tight text-balance sm:text-6xl`}>{title}</h2>
+      {intro && <p className={`mt-6 max-w-2xl text-lg leading-relaxed ${dark ? 'text-sand' : 'text-[#4a4540]'}`}>{intro}</p>}
     </Reveal>
   )
 }
