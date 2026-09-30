@@ -45,7 +45,7 @@ export function Angles() {
   return (
     <section aria-labelledby="angles-h" className="pb-[clamp(64px,10vw,120px)]">
       <Wrap>
-        <SectionHeading id="angles-h" eyebrow="Every angle" title="Clean flanks. No side fans. No tail fin." />
+        <SectionHeading id="angles-h" eyebrow="Every angle" title="Clean Flanks. Wide View. No Vertical Fin." />
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl border border-line bg-paper">
             <AnimatePresence mode="wait" initial={false}>
