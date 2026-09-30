@@ -1,6 +1,8 @@
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'motion/react'
 import {
-  APPLICATIONS, CONTACT, CONTACT_EMAIL, DRAWINGS, ECONOMICS, FOUNDER_LINKEDIN, MODES, MODE_VIEWS,
-  OVERVIEW, SCENES, SPECS, SPEC_VIEWS, TEAM, VIEW_LEFT,
+  APPLICATIONS, CONTACT, CONTACT_EMAIL, DRAWINGS, ECONOMICS, ENGINEERING, FEATURES, FOUNDER_LINKEDIN, MODES, MODE_VIEWS,
+  OVERVIEW, SCENES, SPECS, SPEC_VIEWS, TEAM, VIEWS, VIEW_LEFT,
 } from '../data'
 import { Button, Eyebrow, Reveal, SectionHeading, Wrap, Zoomable } from './ui'
 
@@ -30,6 +32,67 @@ export function Overview() {
             ))}
           </ul>
         </Reveal>
+      </Wrap>
+    </section>
+  )
+}
+
+// Continues the overview, so it has no top padding of its own.
+export function Angles() {
+  const [active, setActive] = useState(VIEWS[0].id)
+  const view = VIEWS.find((v) => v.id === active) ?? VIEWS[0]
+
+  return (
+    <section aria-labelledby="angles-h" className="pb-[clamp(64px,10vw,120px)]">
+      <Wrap>
+        <SectionHeading id="angles-h" eyebrow="Every angle" title="Clean flanks. No side fans. No tail fin." />
+        <Reveal>
+          <div className="relative overflow-hidden rounded-2xl border border-line bg-paper">
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.img
+                key={view.id}
+                src={view.src}
+                alt={view.alt}
+                width={1376}
+                height={768}
+                className="aspect-[16/9] w-full object-contain"
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ duration: 0.35 }}
+              />
+            </AnimatePresence>
+            <p className="absolute left-3 top-3 rounded-full bg-white/85 px-3 py-1.5 font-mono text-[0.68rem] font-medium uppercase tracking-[0.12em] text-[#3a434e]">
+              {view.label} view
+            </p>
+          </div>
+          <div role="tablist" aria-label="Aircraft views" className="mt-4 flex flex-wrap gap-2">
+            {VIEWS.map((v) => (
+              <button
+                key={v.id}
+                type="button"
+                role="tab"
+                aria-selected={v.id === active}
+                onClick={() => setActive(v.id)}
+                className={`rounded-full border px-5 py-2.5 font-mono text-[0.74rem] font-medium uppercase tracking-[0.14em] transition-colors ${
+                  v.id === active ? 'border-copper bg-copper text-[#140b03]' : 'border-line text-muted hover:border-copper hover:text-ink'
+                }`}
+              >
+                {v.label}
+              </button>
+            ))}
+          </div>
+        </Reveal>
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {FEATURES.map((f, i) => (
+            <Reveal key={f.title} delay={i * 0.06} className="h-full">
+              <article className="grid h-full content-start gap-3 rounded-2xl border border-line bg-panel p-6">
+                <h3 className="font-display text-[1.35rem] font-bold uppercase leading-none tracking-[0.02em]">{f.title}</h3>
+                <p className="text-[0.92rem] leading-relaxed text-muted">{f.body}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
       </Wrap>
     </section>
   )
@@ -117,6 +180,35 @@ export function Takeoff() {
                   {v.label}
                 </figcaption>
               </figure>
+            </Reveal>
+          ))}
+        </div>
+      </Wrap>
+    </section>
+  )
+}
+
+// Follows takeoff and landing, so it has no top padding of its own.
+export function Engineering() {
+  return (
+    <section id="engineering" aria-labelledby="eng-h" className="pb-[clamp(64px,10vw,120px)]">
+      <Wrap>
+        <SectionHeading id="eng-h" eyebrow="Engineering" title={ENGINEERING.title} intro={ENGINEERING.intro} />
+        <Reveal>
+          <Zoomable picture={ENGINEERING.cfd} className="border border-line bg-panel" />
+        </Reveal>
+
+        <Reveal className="mt-[clamp(48px,8vw,96px)] grid gap-5">
+          <Eyebrow>Propulsion and power</Eyebrow>
+          <h3 className="font-display text-[clamp(1.9rem,4vw,2.8rem)] font-extrabold uppercase leading-[0.95]">{ENGINEERING.powerTitle}</h3>
+        </Reveal>
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {ENGINEERING.power.map((p, i) => (
+            <Reveal key={p.title} delay={i * 0.06} className="h-full">
+              <article className="grid h-full content-start gap-3 rounded-2xl border border-line bg-panel p-6">
+                <h4 className="font-display text-[1.35rem] font-bold uppercase leading-none tracking-[0.02em]">{p.title}</h4>
+                <p className="text-[0.92rem] leading-relaxed text-muted">{p.body}</p>
+              </article>
             </Reveal>
           ))}
         </div>

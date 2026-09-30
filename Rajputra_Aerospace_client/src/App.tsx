@@ -1,7 +1,7 @@
 import { Hero } from './components/Hero'
 import { Lightbox } from './components/Lightbox'
 import { Nav } from './components/Nav'
-import { Applications, Contact, Drawings, Economics, Footer, Overview, Scenes, Specs, Takeoff, Team } from './components/Sections'
+import { Angles, Applications, Contact, Drawings, Economics, Engineering, Footer, Overview, Scenes, Specs, Takeoff, Team } from './components/Sections'
 
 export default function App() {
   return (
@@ -10,9 +10,11 @@ export default function App() {
       <main id="top">
         <Hero />
         <Overview />
+        <Angles />
         <Applications />
         <Scenes />
         <Takeoff />
+        <Engineering />
         <Specs />
         <Drawings />
         <Economics />

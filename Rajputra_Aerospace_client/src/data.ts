@@ -27,6 +27,7 @@ export const HERO = {
 export const STATS = [
   { value: '300', unit: 'km/h', label: 'Cruise speed' },
   { value: '600', unit: 'km', label: 'Single-sortie range' },
+  { value: '2+', unit: 'hrs', label: 'Endurance' },
   { value: '20,000', unit: 'ft', label: 'Service ceiling' },
   { value: '₹20', unit: '/km', label: 'Flight cost, approx.' },
 ]
@@ -45,6 +46,22 @@ export const OVERVIEW = {
   ],
   tags: ['2 seats, single row', 'Plug-in hybrid', 'eVTOL + USTOL', 'Thrust vectoring'],
 }
+
+// The studio views in the "Every angle" switcher, in tab order.
+export const VIEWS = [
+  { id: 'left', label: 'Left', src: img('side-left'), alt: 'Left side view of the Rajputra Aerospace aircraft on its tricycle landing gear' },
+  { id: 'front', label: 'Front', src: img('front'), alt: 'Front view showing the bubble canopy, nose wheel and both rear thrusters' },
+  { id: 'rear', label: 'Rear', src: img('rear'), alt: 'Rear view showing the boat-tail and twin ducted thruster nacelles' },
+  { id: 'right', label: 'Right', src: img('side-right'), alt: 'Right side view of the Rajputra Aerospace aircraft' },
+  { id: 'top', label: 'Top', src: img('top'), alt: 'Top view showing the swept aft pylons and two-blade rotor' },
+]
+
+export const FEATURES = [
+  { title: 'Two-blade carbon rotor', body: 'Powered for vertical takeoff and landing, then unpowered and autorotating in cruise. A Rotating Mass Balancer on the mast damps two-blade vibration.' },
+  { title: 'Twin vectoring ducted fans', body: 'All forward thrust in cruise. Each fan swivels independently through 90° to counter rotor torque during vertical takeoff and landing.' },
+  { title: 'Tailless boat-tail', body: 'No vertical fin. Vectored thrust keeps the aircraft straight, removing fin drag and crosswind side-force.' },
+  { title: 'Tricycle landing gear', body: 'Steerable nose wheel and a wide-stance main gear, raked to set the rotor at the right angle for fast spin-up.' },
+]
 
 // Each icon is a list of SVG path strings drawn on a 32 x 32 grid.
 export const APPLICATIONS = [
@@ -83,6 +100,24 @@ export const MODE_VIEWS = [
   { src: img('front'), label: 'Front', alt: 'Front view of the Rajputra Aerospace aircraft showing the canopy, tricycle landing gear and ducted fans on each side' },
   { src: img('rear'), label: 'Rear · twin ducted fans', alt: 'Rear view of the Rajputra Aerospace aircraft showing the twin ducted fans on swept pylons' },
 ]
+
+export const ENGINEERING = {
+  title: 'Built to slip through the air',
+  intro: 'Every unit of drag saved lowers battery discharge and extends range. CFD shows the teardrop pod keeping flow attached until the very end of the fuselage.',
+  // Same src as the CFD drawing, so it opens in the viewer alongside the drawings.
+  cfd: {
+    src: img('cfd'),
+    caption: 'Aerodynamic CFD airflow simulation',
+    alt: 'CFD airflow simulation: streamlines flowing smoothly over the teardrop pod into the rear ducted thruster',
+  } as Picture,
+  powerTitle: 'Electric thrust, hybrid range',
+  power: [
+    { title: 'Plug-in hybrid-electric', body: 'Charge from the grid, and an onboard generator holds the charge through long regional cruise.' },
+    { title: '40 kWh solid-state battery', body: 'A solid-state lithium-ion pack with fast charging delivers the power for vertical takeoff.' },
+    { title: '60 L flex-fuel tank', body: 'Runs on E20 petrol or biofuel for the hybrid generator.' },
+    { title: 'Motor 500 Series BLDC', body: 'High-torque brushless motors in composite ducts drive both rear fans.' },
+  ],
+}
 
 type Row = { label: string; value: string; unit?: string }
 
