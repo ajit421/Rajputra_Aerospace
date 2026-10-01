@@ -327,7 +327,7 @@ export function Team() {
               )}
             </Reveal>
           ))}
-          <Reveal delay={0.16} className="flex flex-col bg-copper p-7 text-carbon">
+          <Reveal delay={0.16} className="flex flex-col bg-copper p-7 text-carbon sm:col-span-2">
             <h3 className="font-display text-xl font-bold uppercase tracking-tight">Work with us</h3>
             <p className="mt-2 leading-relaxed">Investors, partners, suppliers and engineers: we'd like to hear from you.</p>
             <a href="#reserve" className="mt-auto pt-5 font-mono text-xs font-semibold uppercase tracking-[0.15em] hover:underline">Get in touch →</a>

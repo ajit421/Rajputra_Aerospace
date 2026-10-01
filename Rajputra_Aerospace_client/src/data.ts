@@ -195,7 +195,6 @@ export const TEAM = [
   { initials: 'AR', name: 'Anushka Singh Rajput', role: 'Founder & CEO', link: { label: 'LinkedIn', href: FOUNDER_LINKEDIN } },
   { initials: 'KS', name: 'Khushboo Singh', role: 'Co-Founder & Director' },
   { initials: 'BP', name: 'BP Pattnaik', role: 'Operations, Mentor & Advisor to CEO', link: { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bppattnaik/' } },
-  { initials: 'AG', name: 'Cdre (Dr) Arun Pratap Golaya (Retd)', role: 'Defence and Business Connect', link: { label: 'X', href: 'https://x.com/Arun_Golaya?lang=en' } },
   { initials: 'HP', name: 'Harshika Paliwal', role: 'Fundraising, Presentation, Financial and Legal Compliance', link: { label: 'LinkedIn', href: 'https://www.linkedin.com/in/harshikaa-paliwal-82a748113/' } },
   { initials: 'IC', name: 'IC IIT Patna', role: 'Incubator · Incubation Centre, IIT Patna' },
 ]

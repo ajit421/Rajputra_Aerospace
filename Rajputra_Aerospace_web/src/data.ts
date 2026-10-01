@@ -140,7 +140,6 @@ export const TEAM = [
   { name: 'Anushka Singh Rajput', role: 'Founder & CEO', link: 'https://www.linkedin.com/in/anushka-singh-rajput-a32104439', site: 'LinkedIn' },
   { name: 'Khushboo Singh', role: 'Co-Founder & Director' },
   { name: 'BP Pattnaik', role: 'Operations, Mentor & Advisor to CEO', link: 'https://www.linkedin.com/in/bppattnaik/', site: 'LinkedIn' },
-  { name: 'Cdre (Dr) Arun Pratap Golaya (Retd)', role: 'Defence and Business Connect', link: 'https://x.com/Arun_Golaya', site: 'X' },
   { name: 'Harshika Paliwal', role: 'Fundraising, presentation, financial and legal compliance', link: 'https://www.linkedin.com/in/harshikaa-paliwal-82a748113/', site: 'LinkedIn' },
 ]
 
